@@ -7,4 +7,8 @@ const pr = danger.github.pr
 if (pr.assignee === null) {
     fail("Please assign someone to merge this PR, and optionally include people who should review.")
  }
+
+ if (pr.body.length == 0) {
+    fail("Please make sure your PR has some description")
+ }
   
